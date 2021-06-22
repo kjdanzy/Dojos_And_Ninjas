@@ -33,7 +33,7 @@ def create_dojo():
     }
     Dojo.create_a_dojo(data)
     log_this("create dojo route", data, "", "")
-    return redirect("/")
+    return redirect("/dojos")
 
 @app.route("/create_new_ninja")
 def create_new_ninja():
