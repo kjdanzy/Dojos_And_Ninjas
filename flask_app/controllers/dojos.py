@@ -7,7 +7,7 @@ from flask_app.models.dojo import Dojo
 from flask_app.models.ninja import Ninja
 
 
-@app.route("/")
+@app.route("/dojos")
 def index():
     dojos = Dojo.get_all_dojos()
     log_this("index route", dojos, "", "")
