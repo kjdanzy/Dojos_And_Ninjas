@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../static/css/style.css" />
+        <title>Dojos</title>
+    </head>
+    <body>
+        <div class="mainContainer">
+            <div class="container asRow">
+                <div id="dojoNew" class="container asCol">
+                    <br />
+                    <h1>New Dojo</h1>
+                    <form action="/create_dojo" method="POST">
+                        <div class="container-sm-gap asRow">
+                            <label for="name">Name:</label>
+                            <input
+                                type="text"
+                                placeholder="Enter a Dojo Location"
+                                name="name"
+                            />
+                            <br /><br />
+                        </div>
+                        <input type="submit" value="Create" />
+                    </form>
+                </div>
+                <div class="container asCol">
+                    <br />
+                    <h1>All Dojos</h1>
+                    <table id="allDojos">
+                        {% for dojo in dojos %}
+                        <tr>
+                            <td>
+                                <a href="/get_dojo/{{ dojo.id }}"
+                                    >{{ dojo.name }}</a
+                                >
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+                    <a href="/create_new_ninja">Add Ninja</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "sans-serif";
+}
+
+#allDojos {
+    border: 1px solid black;
+}
+
+.mainContainer {
+    width: 70%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 10em;
+}
+
+.container-sm-gap {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+main {
+    width: 70%;
+    height: 100px;
+    margin: 30px auto;
+}
+
+div.bottomContainer {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: 100px;
+}
+
+.fixedPosition {
+    position: fixed;
+    top: 130px;
+    left: 110px;
+}
+
+.asCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 1em;
+}
+
+.asRow {
+    display: flex;
+    margin: 0 0;
+    justify-content: space-between;
+    justify-items: right;
+}
+
+.asRowLeft {
+    display: flex;
+    justify-content: left;
+    align-content: flex-start;
+}
+
+span {
+    font-weight: bold;
+    height: 200px;
+}
+
+td.nowrap {
+    height: 200px;
+    width: 100px;
+    font-size: x-large;
+}
+
+th {
+    font-weight: bold;
+    height: 60px;
+}
+
+td.ninja {
+    width: 100px;
+    height: 50px;
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+label {
+    font-weight: bold;
+    width: 60px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../static/css/style.css" />
+        <title>New Ninja</title>
+    </head>
+    <body>
+        <div class="containerCol">
+            <div id="ninjaNew" class="container asCol">
+                <h1>New ninja</h1>
+                <form action="/create_ninja" method="POST">
+                    <table>
+                        <tr>
+                            <td class="ninja">
+                                <label for="my_dojo_id">Dojo:</label>
+                            </td>
+                            <td class="ninja">
+                                <select name="my_dojo_id" id="my_dojo_id">
+                                    <option value="">
+                                        Please make a selection
+                                    </option>
+                                    {% for dojo in dojos %}
+                                    <option value="{{ dojo.id }}">
+                                        {{ dojo.name }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ninja">
+                                <label for="first_name">First Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="first_name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ninja">
+                                <label for="last_name">Last Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="last_name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ninja">
+                                <label for="age">Age:</label>
+                            </td>
+                            <td>
+                                <input type="text" name="age" />
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <input type="submit" value="Create" />
+                </form>
+                <br />
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </body>
+</html>
